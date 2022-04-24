@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("List of Users F55119031");
+            getSupportActionBar().setTitle("List of Users");
         }
 
 
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(MainActivity.this, user.get(i).getName(), Toast.LENGTH_SHORT).show();
                 Log.d("Lihat User", user.get(i).getName());
+
             }
         });
     }
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         AsyncHttpClient client = new AsyncHttpClient();
         String url = "https://api.github.com/users";
-        client.addHeader("Authorization", "token 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");
+        client.addHeader("Authorization", "token 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");
         client.addHeader("User-Agent", "request");
 
 
